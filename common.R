@@ -13,7 +13,7 @@ KURAMOTO_r <- function(network, size, dt=5e-2, sd.meas.noise=0.1, sd.dyn.noise=0
     #prepare time series and parameters vectors
     S <- c()    #this is the network state, consisting of 3*N variables
     M <- 1      #number of variables for the model
-    idxs <- list()
+    idxs <- list()  ##indices
 
     W <- igraph::get.adjacency(network, attr="weight", sparse=F)
     Nodes <- length(igraph::V(network))
